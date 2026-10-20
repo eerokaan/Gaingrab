@@ -1,0 +1,10 @@
+# Gaingrab Application: Compiled standalone binaries, bundled resources, est-core and GStreamer
+gg-application/dist/*.exe filter=lfs diff=lfs merge=lfs -text
+gg-application/dist/*.AppImage filter=lfs diff=lfs merge=lfs -text
+
+gg-application/resources/** filter=lfs diff=lfs merge=lfs -text
+gg-application/build/linux/** filter=lfs diff=lfs merge=lfs -text
+gg-application/build/win/** filter=lfs diff=lfs merge=lfs -text
+
+# Gaingrab Media Engine: Compiled standalone binaries
+gg-mediaengine/dist/** filter=lfs diff=lfs merge=lfs -text

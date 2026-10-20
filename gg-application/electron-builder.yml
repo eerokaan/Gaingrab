@@ -1,0 +1,44 @@
+appId: de.tu-berlin.qu.gaingrab.application
+productName: Gaingrab
+copyright: Eero Kaan | Quality and Usability Lab | TU Berlin
+
+directories:
+    buildResources: build
+    output: dist
+
+beforePack: ./build_scripts/main.js
+
+files:
+    - out/**/*
+    - package.json
+
+linux:
+    icon: build/icon.png
+    target:
+        - AppImage
+    category: Utility
+    extraResources:
+        - from: "build/linux"
+          to: "gg-mediaengine"
+          filter:
+              - "gg-mediaengine"
+              - "gst-lib/**/*"
+        - from: "resources"
+          to: "."
+          filter:
+              - "*.wav"
+
+win:
+    icon: build/icon.png
+    target:
+        - nsis
+    extraResources:
+        - from: "build/win"
+          to: "gg-mediaengine"
+          filter:
+              - "gg-mediaengine.exe"
+              - "gst-lib/**/*"
+        - from: "resources"
+          to: "."
+          filter:
+              - "*.wav"

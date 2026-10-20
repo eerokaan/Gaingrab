@@ -1,0 +1,6 @@
+# ===== DIRECTORIES ===============
+gst-sdk/
+gst-lib/
+
+# ===== FILES ===============
+.DS_Store

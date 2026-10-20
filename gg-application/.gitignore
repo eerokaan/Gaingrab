@@ -1,0 +1,14 @@
+# ===== DIRECTORIES ===============
+node_modules/
+build/linux/gst-lib/
+build/win/gst-lib/
+out/
+
+# ===== PARTIAL DIRECTORIES ===============
+dist/*
+!dist/*.exe
+!dist/*.AppImage
+
+# ===== FILES ===============
+.DS_Store
+.eslintcache
